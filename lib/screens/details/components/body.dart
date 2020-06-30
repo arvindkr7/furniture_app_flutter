@@ -16,7 +16,7 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     // it enable scrolling on small devices
     return SafeArea(
-      bottom: false,
+      bottom: true,
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,6 +44,26 @@ class Body extends StatelessWidget {
                     ),
                   ),
                   ListOfColors(),
+  ]
+      ),
+    ),
+
+
+
+                  Container(
+                    margin: const EdgeInsets.all(10),
+                      width: double.infinity,
+                      padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                      decoration: BoxDecoration(
+                        color: kBackgroundColor,
+                        borderRadius: BorderRadius.circular(50.0),
+                        ),
+
+
+
+
+                    child: Column(children: [
+
                   Padding(
                     padding: const EdgeInsets.symmetric(
                         vertical: kDefaultPadding / 2),
@@ -70,8 +90,10 @@ class Body extends StatelessWidget {
                   ),
                   SizedBox(height: kDefaultPadding),
                 ],
-              ),
-            ),
+    )
+    )
+              ,
+
             ChatAndAddToCart(),
           ],
         ),
